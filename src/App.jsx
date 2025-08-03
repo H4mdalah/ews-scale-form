@@ -46,8 +46,8 @@ const EWSClickForm = () => {
       name: 'Alat Bantu Napas',
       icon: '',
       options: [
-        { label: 'Tidak', value: 'no', score: 0, color: 'bg-green-500' },
-        { label: 'Ya', value: 'yes', score: 2, color: 'bg-orange-500' }
+        { label: 'Tidak', value: 'tidak', score: 0, color: 'bg-green-500' },
+        { label: 'Ya', value: 'Ya', score: 2, color: 'bg-orange-500' }
       ]
     },
     systolicBP: {
@@ -93,8 +93,8 @@ const EWSClickForm = () => {
       name: 'Tingkat Kesadaran',
       icon: '',
       options: [
-        { label: 'Alert (Normal)', value: 'alert', score: 0, color: 'bg-green-500' },
-        { label: 'V/P/U (Gangguan)', value: 'vpu', score: 3, color: 'bg-red-500' }
+        { label: 'Alert (Normal)', value: 'Normal', score: 0, color: 'bg-green-500' },
+        { label: 'V/P/U (Gangguan)', value: 'Gangguan', score: 3, color: 'bg-red-500' }
       ]
     },
   };
@@ -104,42 +104,42 @@ const EWSClickForm = () => {
       name: 'Riwayat Jatuh',
       icon: '',
       options: [
-        { label: 'Tidak', value: 'no', score: 0, color: 'bg-green-500' },
-        { label: 'Ya', value: 'yes', score: 25, color: 'bg-orange-500' }
+        { label: 'Tidak', value: 'Tidak', score: 0, color: 'bg-green-500' },
+        { label: 'Ya', value: 'Ya', score: 25, color: 'bg-orange-500' }
       ]
     },
     diagnosisSekunder: {
       name: 'Diagnosis Sekunder',
       icon: '',
       options: [
-        { label: 'Tidak', value: 'no', score: 0, color: 'bg-green-500' },
-        { label: 'Ya', value: 'yes', score: 15, color: 'bg-orange-500' }
+        { label: 'Tidak', value: 'Tidak', score: 0, color: 'bg-green-500' },
+        { label: 'Ya', value: 'Ya', score: 15, color: 'bg-orange-500' }
       ]
     },
     alatBantuAmbulatori: {
       name: 'Alat Bantu Ambulatori',
       icon: '',
       options: [
-        { label: 'Bedrest/Dibantu Perawat', value: 'bedrest', score: 0, color: 'bg-green-500' },
-        { label: 'Kruk/Tongkat/Walker', value: 'walker', score: 15, color: 'bg-yellow-500' },
-        { label: 'Furniture', value: 'furniture', score: 30, color: 'bg-orange-500' },
+        { label: 'Bedrest/Dibantu Perawat', value: 'Bedrest / Dibantu Perawat', score: 0, color: 'bg-green-500' },
+        { label: 'Kruk/Tongkat/Walker', value: 'Kruk / Tongkat / Walker', score: 15, color: 'bg-yellow-500' },
+        { label: 'Furniture', value: 'Furniture', score: 30, color: 'bg-orange-500' },
       ]
     },
     terapiInfus: {
       name: 'Terapi IV/Infus',
       icon: '',
       options: [
-        { label: 'Tidak', value: 'no', score: 0, color: 'bg-green-500' },
-        { label: 'Ya', value: 'yes', score: 20, color: 'bg-yellow-500' }
+        { label: 'Tidak', value: 'Tidak', score: 0, color: 'bg-green-500' },
+        { label: 'Ya', value: 'Ya', score: 20, color: 'bg-yellow-500' }
       ]
     },
     caraBerjalan: {
       name: 'Cara Berjalan',
       icon: '',
       options: [
-        { label: 'Normal/Bedrest/Kursi Roda', value: 'normal', score: 0, color: 'bg-green-500' },
-        { label: 'Lemah', value: 'slow', score: 10, color: 'bg-yellow-500' },
-        { label: 'Terganggu', value: 'unable', score: 20, color: 'bg-orange-500' }
+        { label: 'Normal/Bedrest/Kursi Roda', value: 'Normal / Bedrest / Kursi Roda', score: 0, color: 'bg-green-500' },
+        { label: 'Lemah', value: 'Lemah', score: 10, color: 'bg-yellow-500' },
+        { label: 'Terganggu', value: 'Terganggu', score: 20, color: 'bg-orange-500' }
       ]
     },
     statusMental: {
@@ -155,10 +155,10 @@ const EWSClickForm = () => {
       icon: '',
       options: [
         { label: '0 - Tidak Nyeri', value: 'none', score: 0, color: 'bg-green-500' },
-        { label: '1-3 Nyeri Ringan', value: 'mild', score: 1, color: 'bg-yellow-500' },
-        { label: '4-6 Nyeri Sedang', value: 'moderate', score: 2, color: 'bg-orange-500' },
-        { label: '7-8 Nyeri Berat', value: 'severe', score: 3, color: 'bg-red-500' },
-        { label: '9-10 Nyeri Sangat Berat', value: 'very_severe', score: 4, color: 'bg-purple-500' }
+        { label: '1-3 Nyeri Ringan', value: 'mild', score: 0, color: 'bg-emerald-500' },
+        { label: '4-6 Nyeri Sedang', value: 'moderate', score: 0, color: 'bg-yellow-500' },
+        { label: '7-8 Nyeri Berat', value: 'severe', score: 0, color: 'bg-orange-500' },
+        { label: '9-10 Nyeri Sangat Berat', value: 'very_severe', score: 0, color: 'bg-red-500' }
       ]
     }
   };
@@ -439,7 +439,7 @@ const EWSClickForm = () => {
 
         {/* Status EWS */}
         <div className="bg-white p-4 rounded-lg shadow">
-          <h3 className="font-semibold mb-3">Status EWS</h3>
+          <h3 className="font-semibold mb-3">Status Morse</h3>
           <div className={`${morseInfo.color} text-white p-4 rounded-lg text-center shadow-lg`}>
             <div className="text-3xl font-bold">{morseScore}</div>
             <div className="text-lg font-semibold">{morseCategory}</div>
