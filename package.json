@@ -2,7 +2,7 @@
   "name": "ews-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://h4mdalah.github.io/ews-scale-form",
+  "homepage": "https://h4mdalah.github.io/ews-scale-form/",
   "type": "module",
   "scripts": {
     "dev": "vite",
